@@ -1,0 +1,139 @@
+.card {
+	position: relative;
+	display: flex;
+	overflow: hidden;
+	flex-direction: column;
+	justify-content: flex-end;
+
+	&:hover .info {
+		transform: translateY(0);
+	}
+
+	.type {
+		font-weight: 500;
+		position: absolute;
+		top: 24px;
+		left: 24px;
+		padding: 8px 32px;
+		text-transform: uppercase;
+		background-color: #1A1A1A;
+	}
+
+	.material {
+		position: absolute;
+		top: 24px;
+		right: 24px;
+		cursor: pointer;
+
+		svg {
+			display: block;
+		}
+
+		&:before, &:after {
+			transition: opacity 0.2s ease-out, top 0.2s ease-out;
+			pointer-events: none;
+			opacity: 0;
+		}
+
+		&:before {
+			font-size: 11px;
+			font-weight: 500;
+			position: absolute;
+			top: calc(100% + 7px);
+			right: 9px;
+			width: max-content;
+			padding: 8px 16px;
+			content: attr(data-content);
+			text-transform: uppercase;
+			background-color: #1A1A1A;
+		}
+
+		&:after {
+			position: absolute;
+			top: 100%;
+			right: 9px;
+			width: 0;
+			height: 0;
+			content: '';
+			border-right: 7px solid transparent;
+			border-bottom: 7px solid #1A1A1A;
+			border-left: 7px solid transparent;
+		}
+
+		&:hover {
+			&:before, &:after {
+				opacity: 1;
+			}
+
+			&:before {
+				top: calc(100% + 12px);
+			}
+
+			&:after {
+				top: calc(100% + 5px);
+			}
+		}
+	}
+
+	img {
+		z-index: -10;
+		object-fit: cover;
+		object-position: center;
+	}
+
+	.info {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		padding: 24px;
+		transition: transform 0.3s ease-out;
+		transform: translateY(100%);
+		color: #1A1A1A;
+		background-color: #FFFFFF;
+
+		> *:not(:last-child):not(:first-child) {
+			margin-bottom: 32px;
+		}
+
+		h2 {
+			font-size: 36px;
+			font-weight: 700;
+			line-height: 1.4;
+			position: absolute;
+			bottom: calc(100% + 24px);
+			width: calc(100% - 48px);
+			letter-spacing: 0.05em;
+			text-transform: uppercase;
+			color: #FFFFFF;
+		}
+
+		h3 {
+			font-size: 24px;
+			line-height: 1.4;
+			letter-spacing: 0.05em;
+		}
+
+		p {
+			white-space: pre;
+			text-transform: uppercase;
+		}
+
+		a {
+			font-size: 20px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+			padding: 12px 0;
+			text-decoration: none;
+			text-transform: uppercase;
+			color: #FFFFFF;
+			background-color: #1A1A1A;
+
+			svg {
+				display: block;
+				margin-left: 16px;
+			}
+		}
+	}
+}
