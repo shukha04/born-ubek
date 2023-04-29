@@ -96,3 +96,76 @@
 		}
 	}
 }
+
+.about {
+	padding: 80px;
+
+	h2 {
+		font-size: 48px;
+		font-weight: 700;
+		line-height: 1.4;
+		margin-bottom: 24px;
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+		color: #1A1A1A;
+	}
+
+	article {
+		display: flex;
+
+		div {
+			width: 50%;
+			padding: 48px;
+			background-color: #1A1A1A;
+
+			header {
+				font-size: 32px;
+				font-weight: 600;
+				line-height: 1.4;
+				margin-bottom: 240px;
+				letter-spacing: 0.05em;
+				text-transform: uppercase;
+			}
+
+			svg {
+				line-height: 1.4;
+				display: block;
+				margin-bottom: 64px;
+				user-select: none;
+				animation: spin 15s linear infinite;
+				letter-spacing: 0.05em;
+				text-transform: uppercase;
+				pointer-events: none;
+			}
+
+			@keyframes spin {
+				0% {
+					transform: rotate(0);
+				}
+				100% {
+					transform: rotate(-360deg);
+				}
+			}
+
+			p {
+				font-size: 20px;
+				font-weight: 400;
+				flex-grow: 0;
+				flex-shrink: 0;
+				text-transform: uppercase;
+			}
+		}
+
+		span {
+			position: relative;
+			flex-grow: 0;
+			flex-shrink: 0;
+			width: 50%;
+
+			img {
+				object-fit: cover;
+				object-position: top left;
+			}
+		}
+	}
+}
