@@ -147,6 +147,10 @@ const HomePage = () => {
 					</div>
 				</article>
 			</section>
+			<section className={classes.banner} role='banner'>
+				<Image src='/banner.jpg' alt='Основная миссия - развитие патриотизма' fill />
+				<h2 className={nunitoSans.className}>Основная миссия - развитие патриотизма </h2>
+			</section>
 		</Layout>
 	)
 }

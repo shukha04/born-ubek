@@ -2,6 +2,7 @@
 	position: relative;
 	width: 100vw;
 	height: 100vh;
+	background-color: #FFFFFF;
 
 	video {
 		width: 100%;
@@ -28,6 +29,15 @@
 			width: 100%;
 			animation: roll 15s linear infinite;
 			gap: 8px;
+
+			@keyframes roll {
+				0% {
+					transform: translateX(0);
+				}
+				100% {
+					transform: translateX(2455px);
+				}
+			}
 
 			li {
 				font-size: 34px;
@@ -61,17 +71,9 @@
 	}
 }
 
-@keyframes roll {
-	0% {
-		transform: translateX(0);
-	}
-	100% {
-		transform: translateX(2455px);
-	}
-}
-
 .products {
 	padding-top: 50px;
+	background-color: #FFFFFF;
 
 	.categories {
 		display: flex;
@@ -99,6 +101,7 @@
 
 .about {
 	padding: 80px;
+	background-color: #FFFFFF;
 
 	h2 {
 		font-size: 48px;
@@ -167,5 +170,27 @@
 				object-position: top left;
 			}
 		}
+	}
+}
+
+.banner {
+	display: flex;
+	background-color: rgba(#000000, 0.3);
+
+	img {
+		position: fixed !important;
+		z-index: -1;
+		top: 0;
+		right: 0;
+		object-fit: cover;
+		object-position: center;
+	}
+
+	h2 {
+		font-size: 96px;
+		font-weight: 700;
+		padding: 200px;
+		text-align: center;
+		text-transform: uppercase;
 	}
 }

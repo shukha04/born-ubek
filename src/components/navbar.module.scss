@@ -12,6 +12,11 @@
 
 	&.filled {
 		background-color: #1A1A1A;
+
+		ul li a:active {
+			color: #1A1A1A;
+			background-color: #FFFFFF;
+		}
 	}
 
 	ul {
@@ -65,11 +70,6 @@
 						max-height: 75%;
 						border-color: #FFFFFF;
 					}
-				}
-
-				&:active {
-					color: #1A1A1A;
-					background-color: #FFFFFF;
 				}
 			}
 		}
