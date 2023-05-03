@@ -4,31 +4,63 @@ import TelegramIcon from '@/assets/icons/telegram.svg'
 import classes from '@/components/navbar.module.scss'
 import useScrollY from '@/hooks/useScrollY'
 import Image from 'next/image'
-import Link from 'next/link'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 const Navbar = () => {
+	const [mobileOpen, setMobileOpen] = useState<boolean>(false)
+
 	// listening scroll event at certain point
 	const scrolled = useScrollY(y => y > 0)
 
-	const [fillNav, setFillNav] = useState<boolean>(false)
-
-	useEffect(() => {
-		setFillNav(scrolled)
-	}, [scrolled])
+	const handleNav = () => {
+		if (!mobileOpen) {
+			window.document.documentElement.style.overflowY = 'hidden'
+		} else {
+			window.document.documentElement.style.overflowY = 'initial'
+		}
+		setMobileOpen(prev => !prev)
+	}
 
 	return (
 		<>
-			<nav className={fillNav ? [classes.navbar, classes.filled].join(' ') : classes.navbar}>
+			<nav className={mobileOpen ? [classes.mobile, classes.open].join(' ') : classes.mobile}>
 				<ul>
 					<li>
-						<Link href='/#products'>Продукция</Link>
+						<a href='#products'>Продукция</a>
 					</li>
 					<li>
-						<Link href='/#about'>О бренде</Link>
+						<a href='#about'>О бренде</a>
 					</li>
 					<li>
-						<Link href='/#contacts'>Контакты</Link>
+						<a href='#contacts'>Контакты</a>
+					</li>
+					<li className={classes.social}>
+						<a href='https://youtube.com' target='_blank' rel='noreferrer'>
+							<InstagramIcon />
+						</a>
+					</li>
+					<li className={classes.social}>
+						<a href='https://youtube.com' target='_blank' rel='noreferrer'>
+							<TelegramIcon />
+						</a>
+					</li>
+					<li className={classes.social}>
+						<a href='https://youtube.com' target='_blank' rel='noreferrer'>
+							<FacebookIcon />
+						</a>
+					</li>
+				</ul>
+			</nav>
+			<nav className={scrolled ? [classes.navbar, classes.filled].join(' ') : classes.navbar}>
+				<ul>
+					<li>
+						<a href='#products'>Продукция</a>
+					</li>
+					<li>
+						<a href='#about'>О бренде</a>
+					</li>
+					<li>
+						<a href='#contacts'>Контакты</a>
 					</li>
 				</ul>
 				<ul>
@@ -48,8 +80,13 @@ const Navbar = () => {
 						</a>
 					</li>
 				</ul>
+				<button onClick={handleNav}>
+					<span />
+					<span />
+					<span />
+				</button>
 			</nav>
-			<div className={fillNav ? [classes.logo_wrapper, classes.top].join(' ') : classes.logo_wrapper}>
+			<div className={scrolled ? [classes.logo_wrapper, classes.top].join(' ') : classes.logo_wrapper}>
 				<Image
 					src='/logo.svg'
 					alt='BORN UZBEK logotype'

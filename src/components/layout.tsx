@@ -15,7 +15,10 @@ const Layout = ({children, className}: LayoutProps) => {
 				<meta name='description' content='' />
 				<meta name='keywords' content='' />
 				<meta name='author' content='GeekOn' />
-				<meta name='viewport' content='width=device-width, initial-scale=1.0' />
+				<meta
+					name='viewport'
+					content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0'
+				/>
 				<meta httpEquiv='X-UA-Compatible' content='ie=edge' />
 				<meta name='robots' content='index, follow' />
 				<meta name='theme-color' content='#1A1A1A' />
