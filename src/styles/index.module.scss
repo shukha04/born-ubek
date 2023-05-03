@@ -15,6 +15,7 @@
 		z-index: 1;
 		right: 0;
 		bottom: 0;
+		overflow-x: hidden;
 		padding: 24px 0;
 		user-select: none;
 		transform: translateY(50%);
@@ -109,6 +110,7 @@
 			@media (max-width: 1024px) {
 				min-width: 513px;
 				max-width: 100%;
+				margin-bottom: 12px;
 			}
 
 			@media (max-width: 513px) {
