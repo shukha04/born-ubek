@@ -595,6 +595,8 @@
 	img {
 		position: fixed !important;
 		z-index: -1;
+		height: 100vh !important;
+		height: 100svh !important;
 		pointer-events: none;
 		object-position: center;
 		object-fit: cover;
