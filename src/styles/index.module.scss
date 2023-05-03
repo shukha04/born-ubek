@@ -12,11 +12,11 @@
 	.roller {
 		position: absolute;
 		z-index: 1;
+		top: 100vh;
 		right: 0;
-		bottom: 0;
 		padding: 24px 0;
 		user-select: none;
-		transform: translateY(50%);
+		transform: translateY(-50%);
 		pointer-events: none;
 		background-color: #1A1A1A;
 
