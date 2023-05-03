@@ -9,7 +9,7 @@ import { GetStaticProps } from 'next'
 import { Unbounded } from 'next/font/google'
 import localFont from 'next/font/local'
 import Image from 'next/image'
-import { Fragment, useState } from 'react'
+import { Fragment, useRef, useState } from 'react'
 
 const FuturaPTFont = localFont({
 	src: [
@@ -51,8 +51,20 @@ const HomePage = ({data}: { data: JSONData }) => {
 	const [muted, setMuted] = useState<boolean>(true)
 	const [selectedCategory, setSelectedCategory] = useState<string>('men')
 
+	const videoRef = useRef<HTMLVideoElement>(null)
+
 	const handleMute = () => {
-		setMuted(p => !p)
+		if (!videoRef.current) {
+			return
+		}
+
+		if (videoRef.current.muted) {
+			setMuted(false)
+			videoRef.current.muted = false
+		} else {
+			setMuted(true)
+			videoRef.current.muted = true
+		}
 	}
 
 	return (
@@ -60,13 +72,16 @@ const HomePage = ({data}: { data: JSONData }) => {
 			<section className={classes.main}>
 				<video
 					autoPlay
-					muted={muted}
+					muted
 					loop
 					disablePictureInPicture
 					aria-disabled
 					disableRemotePlayback
 					poster='/main-bg-preview.jpg'
-					preload='none'
+					preload='true'
+					controls={false}
+					playsInline
+					ref={videoRef}
 				>
 					<source src='/main-bg.webm' type='video/webm' />
 					<source src='/main-bg.mp4' type='video/mp4' />
