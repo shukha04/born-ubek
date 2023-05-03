@@ -144,7 +144,8 @@
 	z-index: 9;
 	top: 0;
 	right: 0;
-	width: 400px;
+	width: 100%;
+	max-width: 400px;
 	height: 100vh;
 	transition: transform 0.3s ease-out;
 	transform: translateX(400px);
@@ -152,11 +153,6 @@
 
 	@media (min-width: 1025px) {
 		display: none;
-	}
-
-	@media (max-width: 400px) {
-		width: 100vw;
-		transform: translateX(100vw);
 	}
 
 	&.open {
