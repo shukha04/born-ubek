@@ -596,7 +596,7 @@
 		position: fixed !important;
 		z-index: -1;
 		height: 100vh !important;
-		height: 100svh !important;
+		height: 100lvh !important;
 		pointer-events: none;
 		object-position: center;
 		object-fit: cover;
@@ -619,8 +619,6 @@
 }
 
 .instagram {
-	height: 300vh;
-	background-color: #FFFFFF;
 }
 
 // .about {
