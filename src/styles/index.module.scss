@@ -1,6 +1,7 @@
 .main {
 	width: 100vw;
 	height: 100vh;
+	height: 100dvh;
 	background-color: #FFFFFF;
 
 	video {
@@ -12,11 +13,11 @@
 	.roller {
 		position: absolute;
 		z-index: 1;
-		top: 100vh;
 		right: 0;
+		bottom: 0;
 		padding: 24px 0;
 		user-select: none;
-		transform: translateY(-50%);
+		transform: translateY(50%);
 		pointer-events: none;
 		background-color: #1A1A1A;
 
@@ -50,11 +51,19 @@
 	.sound {
 		position: absolute;
 		right: 40px;
-		bottom: 86px;
+		bottom: 87px;
 		padding: 12px;
 		transition: background-color 0.3s ease-out;
 		border-radius: 100px;
 		background-color: rgba(26, 26, 26, 0.5);
+
+		@media (max-width: 1440px) {
+			bottom: 80px;
+		}
+
+		@media (max-width: 768px) {
+			bottom: 76px;
+		}
 
 		&:hover, &:focus {
 			background-color: #1A1A1A;

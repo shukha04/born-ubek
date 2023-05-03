@@ -26,13 +26,13 @@ const Navbar = () => {
 			<nav className={mobileOpen ? [classes.mobile, classes.open].join(' ') : classes.mobile}>
 				<ul>
 					<li>
-						<a href='#products'>Продукция</a>
+						<a href='#products' onClick={handleNav}>Продукция</a>
 					</li>
 					<li>
-						<a href='#about'>О бренде</a>
+						<a href='#about' onClick={handleNav}>О бренде</a>
 					</li>
 					<li>
-						<a href='#contacts'>Контакты</a>
+						<a href='#contacts' onClick={handleNav}>Контакты</a>
 					</li>
 					<li className={classes.social}>
 						<a href='https://youtube.com' target='_blank' rel='noreferrer'>
