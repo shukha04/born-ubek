@@ -1,0 +1,65 @@
+.footer {
+  .container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-top: 50px;
+  }
+  .emailSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .emailSection__info {
+    width: 400px;
+    p {
+      font-size: 1.3em;
+      margin-bottom: 16px;
+    }
+    small {
+      color: #747B81;
+    }
+  }
+  .emailSection__form {
+    display: flex;
+    margin-right: 100px;
+    input {
+      flex-shrink: 0;
+      border: none;
+      outline: none;
+      background-color: transparent;
+      border-bottom: 1px solid #fff;
+      max-width: 300px;
+      width: 100%;
+      color: #fff;
+      text-transform: uppercase;
+      margin-right: 16px;
+      &::placeholder {
+        color: #fff;
+      }
+    }
+    button {
+      border: 2px solid #fff;
+      padding: 16px 56px;
+      background-color: #fff;
+      text-transform: uppercase;
+      transition: background-color 0.2s ease-out, color 0.2s ease-out;
+      &:hover, &:focus {
+        background-color: #1A1A1A;
+        color: #fff;
+      }
+    }
+  }
+  .infoSection {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 70px;
+    .footerTitle {
+      font-size: 1.3em;
+      margin-bottom: 16px;
+    }
+    .footerLink {
+      display: block;
+      margin-bottom: 16px;
+    }
+  }
+}
