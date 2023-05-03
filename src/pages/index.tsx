@@ -186,6 +186,11 @@ const HomePage = ({data}: { data: JSONData }) => {
 					</div>
 				</article>
 			</section>
+			<div role='banner' className={classes.banner}>
+				<Image src='/banner.jpg' alt='Основная миссия - развитие патриотизма' fill />
+				<h2 className={unbounded.className}>Основная миссия -<br />развитие патриотизма</h2>
+			</div>
+			<section className={classes.instagram}></section>
 		</Layout>
 	)
 }

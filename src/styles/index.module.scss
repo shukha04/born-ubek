@@ -583,6 +583,44 @@
 	}
 }
 
+.banner {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 50vh;
+	height: 50svh;
+	background-color: rgba(#000000, 0.2);
+
+	img {
+		position: fixed !important;
+		z-index: -1;
+		pointer-events: none;
+		object-position: center;
+		object-fit: cover;
+	}
+
+	h2 {
+		font-size: 4em;
+		font-weight: 700;
+		padding: 100px;
+		text-align: center;
+
+		@media (max-width: 1136px) {
+			font-size: 3em;
+		}
+
+		@media (max-width: 580px) {
+			font-size: 2em;
+		}
+	}
+}
+
+.instagram {
+	height: 300vh;
+	background-color: #FFFFFF;
+}
+
 // .about {
 // 	padding: 80px;
 // 	background-color: #FFFFFF;
