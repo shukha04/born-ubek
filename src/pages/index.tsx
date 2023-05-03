@@ -2,9 +2,11 @@ import HeadphoneStrikedIcon from '@/assets/icons/headphone-striked.svg'
 import HeadphoneIcon from '@/assets/icons/headphone.svg'
 import LinkIcon from '@/assets/icons/link.svg'
 import StarIcon from '@/assets/icons/star.svg'
+import InstaPost, { InstaPostType } from '@/components/insta-post'
 import Layout from '@/components/layout'
 import getStaticData, { JSONData } from '@/pages/api/staticdata'
 import classes from '@/styles/index.module.scss'
+import axios from 'axios'
 import { GetStaticProps } from 'next'
 import { Unbounded } from 'next/font/google'
 import localFont from 'next/font/local'
@@ -47,7 +49,7 @@ const quotes: string[] = [
 	'Born Uzbek'
 ]
 
-const HomePage = ({data}: { data: JSONData }) => {
+const HomePage = ({data, posts}: { data: JSONData, posts: InstaPostType[] }) => {
 	const [muted, setMuted] = useState<boolean>(true)
 	const [selectedCategory, setSelectedCategory] = useState<string>('men')
 
@@ -190,7 +192,25 @@ const HomePage = ({data}: { data: JSONData }) => {
 				<Image src='/banner.jpg' alt='Основная миссия - развитие патриотизма' fill />
 				<h2 className={unbounded.className}>Основная миссия -<br />развитие патриотизма</h2>
 			</div>
-			<section className={classes.instagram}></section>
+			<section className={classes.instagram}>
+				<h2 className={unbounded.className}>Инстаграм</h2>
+				<div>
+					{posts.map(post => (
+						<article key={post.id} role='link'>
+							<a href={post.permalink} target='_blank' rel='noreferrer'>
+								<InstaPost
+									id={post.id}
+									caption={post.caption}
+									media_type={post.media_type}
+									media_url={post.media_url}
+									permalink={post.permalink}
+								/>
+								<LinkIcon />
+							</a>
+						</article>
+					))}
+				</div>
+			</section>
 		</Layout>
 	)
 }
@@ -198,9 +218,13 @@ const HomePage = ({data}: { data: JSONData }) => {
 export const getStaticProps: GetStaticProps = async () => {
 	const data = await getStaticData()
 
+	const instagramPosts: InstaPostType[] = await axios.get('https://graph.instagram.com/me/media?fields=id,media_type,media_url,caption,permalink&limit=8&access_token=IGQVJVTzdSLUQ4c3owRmxfOXJ2aUhibzd2RHFsbE1rM2hqX1NEWnAwSEg1eHBxRjY4aTFqYVRaTzVyeUVRQmNCMU1ZAQVJBUURLR1NTTF9XNjUweGxBY2I0UEFWSVduTGdIWkUxRThB')
+		.then(res => res.data.data)
+
 	return {
 		props: {
-			data
+			data,
+			posts: instagramPosts
 		}
 	}
 }
