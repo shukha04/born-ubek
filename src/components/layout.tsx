@@ -27,8 +27,8 @@ const Layout = ({children, className}: LayoutProps) => {
 				<meta property='og:title' content='BORN UZBEK' />
 				<meta property='og:type' content='website' />
 				<meta property='og:description' content='' />
-				<meta property='og:url' content='' />
-				<meta property='og:image' content='' />
+				<meta property='og:url' content='https://bornuzbek.uz' />
+				<meta property='og:image' content='/logo.svg' />
 				{/* TWITTER META */}
 				<meta name='twitter:card' content='summary' />
 				<meta name='twitter:site' content='@bornuzbek' />
