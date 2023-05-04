@@ -21,7 +21,7 @@
   }
   .emailSection__form {
     display: flex;
-    margin-right: 100px;
+    margin-right: 156px;
     input {
       flex-shrink: 0;
       border: none;
@@ -35,6 +35,16 @@
       margin-right: 16px;
       &::placeholder {
         color: #fff;
+      }
+      /* Change the white to any color */
+      &:-webkit-autofill,
+      &:-webkit-autofill:hover,
+      &:-webkit-autofill:focus,
+      &:-webkit-autofill:active{
+        -webkit-box-shadow: 0 0 0 30px #1A1A1A inset !important;
+      }
+      &:-webkit-autofill{
+        -webkit-text-fill-color: #fff !important;
       }
     }
     button {
@@ -59,7 +69,54 @@
     }
     .footerLink {
       display: block;
+      padding: 6px;
       margin-bottom: 16px;
+      width: fit-content;
+      &:before, &:after {
+        position: absolute;
+        width: 100%;
+        max-width: 0;
+        height: 100%;
+        max-height: 0;
+        content: '';
+        transition: max-height 0.3s ease-out, max-width 0.3s ease-out;
+      }
+
+      &:before {
+        top: 0;
+        left: 0;
+        border-top: 1px solid transparent;
+        border-left: 1px solid transparent;
+      }
+
+      &:after {
+        right: 0;
+        bottom: 0;
+        border-right: 1px solid transparent;
+        border-bottom: 1px solid transparent;
+      }
+
+      &:hover, &:focus {
+        &:before, &:after {
+          max-width: calc(100% - 16px);
+          max-height: calc(100% - 16px);
+          border-color: #FFFFFF;
+        }
+      }
+      &:active {
+        color: #1A1A1A;
+        background-color: #FFFFFF;
+      }
+    }
+  }
+  .authorship {
+    margin-top: 100px;
+    background-color: #3C3C3C;
+    height: fit-content;
+    .container {
+      padding: 16px 0;
+      display: flex;
+      justify-content: space-between;
     }
   }
 }

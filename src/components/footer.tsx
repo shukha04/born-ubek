@@ -16,6 +16,9 @@ const Footer = () => {
                     </form>
                 </div>
                 <div className={classes.infoSection}>
+                    <div className={classes.logo}>
+                        <small>Основная миссия  - развитие патриотизма </small>
+                    </div>
                     <div className={classes.about}>
                         <p className={classes.footerTitle}>Для клиента</p>
                         <a className={classes.footerLink} href="#">О бренде</a>
@@ -23,11 +26,18 @@ const Footer = () => {
                     </div>
                     <div className={classes.contacts}>
                         <p className={classes.footerTitle}>Контакты</p>
-                        <div>
-
-                        </div>
+                        <a className={classes.footerLink} href="tel:+998 33 695 95 50">+998 33 695 95 50</a>
+                        <a className={classes.footerLink} href="mailto:info@bornuzbek.uz">info@bornuzbek.uz</a>
                     </div>
-                    <div className={classes.payments}></div>
+                    <div className={classes.payments}>
+                        <p className={classes.footerTitle}>Способ оплаты</p>
+                    </div>
+                </div>
+            </div>
+            <div className={classes.authorship}>
+                <div className={classes.container}>
+                    <small>© Bornuzbek 2022. Все права защищены.</small>
+                    <a href="#">Created by GeekOn</a>
                 </div>
             </div>
         </footer>
