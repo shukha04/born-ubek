@@ -3,7 +3,7 @@ const nextConfig = {
 	reactStrictMode: true,
 	images: {
 		formats: ['image/webp', 'image/avif'],
-		domains: ['scontent.cdninstagram.com']
+		domains: ['*.cdninstagram.com']
 	},
 	webpack(config) {
 		config.module.rules.push({
