@@ -3,13 +3,7 @@ const nextConfig = {
 	reactStrictMode: true,
 	images: {
 		formats: ['image/webp', 'image/avif'],
-		remotePatterns: [
-			{
-				protocol: 'https',
-				hostname: 'scontent.cdninstagram.com',
-				port: ''
-			}
-		]
+		domains: ['scontent.cdninstagram.com']
 	},
 	webpack(config) {
 		config.module.rules.push({
