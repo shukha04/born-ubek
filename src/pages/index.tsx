@@ -218,7 +218,7 @@ const HomePage = ({data, posts}: { data: JSONData, posts: InstaPostType[] }) => 
 export const getStaticProps: GetStaticProps = async () => {
 	const data = await getStaticData()
 
-	const instagramPosts: InstaPostType[] = await axios.get('https://graph.instagram.com/me/media?fields=id,media_type,media_url,caption,permalink&limit=8&access_token=IGQVJVTzdSLUQ4c3owRmxfOXJ2aUhibzd2RHFsbE1rM2hqX1NEWnAwSEg1eHBxRjY4aTFqYVRaTzVyeUVRQmNCMU1ZAQVJBUURLR1NTTF9XNjUweGxBY2I0UEFWSVduTGdIWkUxRThB')
+	const instagramPosts: InstaPostType[] = await axios.get(`https://graph.instagram.com/me/media?fields=id,media_type,media_url,caption,permalink&limit=8&access_token=${process.env.IG_ACCESS_TOKEN}`)
 		.then(res => res.data.data)
 
 	return {
