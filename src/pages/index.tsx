@@ -12,6 +12,7 @@ import { Unbounded } from 'next/font/google'
 import localFont from 'next/font/local'
 import Image from 'next/image'
 import { Fragment, useRef, useState } from 'react'
+import Rellax from 'rellax'
 
 const FuturaPTFont = localFont({
 	src: [
@@ -54,6 +55,7 @@ const HomePage = ({data, posts}: { data: JSONData, posts: InstaPostType[] }) => 
 	const [selectedCategory, setSelectedCategory] = useState<string>('men')
 
 	const videoRef = useRef<HTMLVideoElement>(null)
+	const bannerRef = useRef<HTMLImageElement>(null)
 
 	const handleMute = () => {
 		if (!videoRef.current) {
@@ -67,6 +69,14 @@ const HomePage = ({data, posts}: { data: JSONData, posts: InstaPostType[] }) => 
 			setMuted(true)
 			videoRef.current.muted = true
 		}
+	}
+
+	const handleBannerLoad = () => {
+		new Rellax(bannerRef.current || undefined, {
+			speed: 2,
+			center: true,
+			vertical: true
+		})
 	}
 
 	return (
@@ -189,7 +199,14 @@ const HomePage = ({data, posts}: { data: JSONData, posts: InstaPostType[] }) => 
 				</article>
 			</section>
 			<div role='banner' className={classes.banner}>
-				<Image src='/banner.jpg' alt='Основная миссия - развитие патриотизма' fill />
+				<Image
+					src='/banner.jpg'
+					alt='Основная миссия - развитие патриотизма'
+					width={1920}
+					height={1080}
+					ref={bannerRef}
+					onLoad={handleBannerLoad}
+				/>
 				<h2 className={unbounded.className}>Основная миссия -<br />развитие патриотизма</h2>
 			</div>
 			<section className={classes.instagram}>

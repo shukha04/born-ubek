@@ -447,18 +447,23 @@
 
 	article {
 		display: flex;
+		flex-wrap: wrap;
 
 		div {
 			flex-grow: 1;
 			width: 50%;
 
+			@media (max-width: 768px) {
+				width: 100%;
+
+				&.image {
+					height: 400px;
+				}
+			}
+
 			&.image {
 				position: relative;
 				flex-shrink: 0;
-
-				@media (max-width: 768px) {
-					display: none;
-				}
 			}
 
 			&.text {
@@ -593,7 +598,10 @@
 	background-color: rgba(#000000, 0.2);
 
 	img {
+		position: absolute;
 		z-index: -1;
+		width: 100%;
+		height: 200%;
 		pointer-events: none;
 		object-position: center;
 		object-fit: cover;
@@ -633,7 +641,7 @@
 		font-weight: 600;
 		position: relative;
 		display: inline-block;
-		margin-bottom: 80px;
+		margin-bottom: 5vw;
 		color: #1A1A1A;
 
 		&:before {
