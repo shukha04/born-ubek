@@ -219,6 +219,7 @@ const HomePage = ({data, posts}: { data: JSONData, posts: InstaPostType[] }) => 
 					width={1920}
 					height={1080}
 					ref={bannerRef}
+					priority
 					onLoad={handleBannerLoad}
 				/>
 				<h2 className={unbounded.className} data-aos='zoom-out'>Основная миссия -<br />развитие патриотизма</h2>
