@@ -85,7 +85,6 @@ const HomePage = ({data, posts}: { data: JSONData, posts: InstaPostType[] }) => 
 		AOS.init({
 			offset: 180,
 			duration: 500,
-			mirror: true,
 			easing: 'ease-out'
 		})
 	}, [])
