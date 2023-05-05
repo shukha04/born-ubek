@@ -6,12 +6,14 @@ import InstaPost, { InstaPostType } from '@/components/insta-post'
 import Layout from '@/components/layout'
 import getStaticData, { JSONData } from '@/pages/api/staticdata'
 import classes from '@/styles/index.module.scss'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 import axios from 'axios'
 import { GetStaticProps } from 'next'
 import { Unbounded } from 'next/font/google'
 import localFont from 'next/font/local'
 import Image from 'next/image'
-import { Fragment, useRef, useState } from 'react'
+import { Fragment, useEffect, useRef, useState } from 'react'
 import Rellax from 'rellax'
 
 const FuturaPTFont = localFont({
@@ -79,6 +81,15 @@ const HomePage = ({data, posts}: { data: JSONData, posts: InstaPostType[] }) => 
 		})
 	}
 
+	useEffect(() => {
+		AOS.init({
+			offset: 180,
+			duration: 500,
+			mirror: true,
+			easing: 'ease-out'
+		})
+	}, [])
+
 	return (
 		<Layout className={FuturaPTFont.className}>
 			<section className={classes.main}>
@@ -128,13 +139,14 @@ const HomePage = ({data, posts}: { data: JSONData, posts: InstaPostType[] }) => 
 							}}
 						>
 							<Image src={category.image} alt={`BORN UZBEK - ${category.title}`} fill />
-							<p className={unbounded.className}>{category.title.split(' ').join('\n')}</p>
+							<p className={unbounded.className} data-aos='fade-up' data-aos-duration={200}>{category.title.split(' ')
+								.join('\n')}</p>
 						</div>
 					))}
 				</div>
 				<div className={classes.list} role='tabpanel'>
 					{data.categories.filter(c => c.key === selectedCategory)[0].products.map(product => (
-						<article key={product.id} tabIndex={0}>
+						<article key={product.id} tabIndex={0} data-aos='fade-down'>
 							<Image src={product.image} alt={`BORN UZBEK - ${product.type} ${product.title}`} fill />
 							<span role='definition'>{product.type}</span>
 							<span role='tooltip' data-title={product.material} tabIndex={0}><StarIcon /></span>
@@ -149,16 +161,19 @@ const HomePage = ({data, posts}: { data: JSONData, posts: InstaPostType[] }) => 
 				</div>
 			</section>
 			<section className={classes.about} id='about'>
-				<h2 className={unbounded.className}>BORN UZBEK - первый и единственный Streetstyle бренд, активно популяризующий моду на оверсайз и использующий этот формат в качестве ключевого направления в создании своих коллекций.</h2>
+				<h2
+					className={unbounded.className}
+					data-aos='fade-down-right'
+				>BORN UZBEK - первый и единственный Streetstyle бренд, активно популяризующий моду на оверсайз и использующий этот формат в качестве ключевого направления в создании своих коллекций.</h2>
 				<article className={classes.info}>
-					<div className={classes.image}>
+					<div className={classes.image} data-aos='slide-left' data-aos-offset={0}>
 						<Image
 							src='/about-1.png'
 							alt='BORN UZBEK - Бренд был основан в 2020 году, как творческое подразделение, специализирующееся на дизайнерской полиграфии.'
 							fill
 						/>
 					</div>
-					<div className={classes.text}>
+					<div className={classes.text} data-aos='slide-right' data-aos-offset={0}>
 						<h3
 							className={unbounded.className}
 						>Бренд был основан в 2020 году, как творческое подразделение, специализирующееся на дизайнерской полиграфии.</h3>
@@ -166,14 +181,14 @@ const HomePage = ({data, posts}: { data: JSONData, posts: InstaPostType[] }) => 
 					</div>
 				</article>
 				<article className={classes.ceo}>
-					<div className={classes.image}>
+					<div className={classes.image} data-aos='slide-right' data-aos-offset={0}>
 						<Image
 							src='/about-2.jpg'
 							alt='BORN UZBEK - Бренд был основан в 2020 году, как творческое подразделение, специализирующееся на дизайнерской полиграфии.'
 							fill
 						/>
 					</div>
-					<div className={classes.text}>
+					<div className={classes.text} data-aos='slide-left' data-aos-offset={0}>
 						<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'>
 							<path
 								fill='none'
@@ -207,7 +222,7 @@ const HomePage = ({data, posts}: { data: JSONData, posts: InstaPostType[] }) => 
 					ref={bannerRef}
 					onLoad={handleBannerLoad}
 				/>
-				<h2 className={unbounded.className}>Основная миссия -<br />развитие патриотизма</h2>
+				<h2 className={unbounded.className} data-aos='zoom-out'>Основная миссия -<br />развитие патриотизма</h2>
 			</div>
 			<section className={classes.instagram}>
 				<h2 className={unbounded.className}>Инстаграм</h2>
