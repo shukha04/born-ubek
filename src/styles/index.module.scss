@@ -420,6 +420,7 @@
 .about {
 	position: relative;
 	z-index: 2;
+	overflow-x: hidden;
 	padding: 5vw;
 	background-color: #FFFFFF;
 	scroll-margin: 80px;
