@@ -34,6 +34,66 @@
 					"description": "Стойкий принт\nВысокое качество\nДля тех, кто любит быть не таким как все",
 					"price": 89000,
 					"url": "https://youtube.com"
+				},
+				{
+					"id": "613b0820-7de7-4271-b54a-ead862f9987f",
+					"title": "Kelajagimizni o’zimiz quramiz",
+					"image": "/product-image.jpg",
+					"type": "Футболка",
+					"material": "100% хлопок",
+					"description": "Стойкий принт\nВысокое качество\nДля тех, кто любит быть не таким как все",
+					"price": 109000,
+					"url": "https://youtube.com"
+				},
+				{
+					"id": "bd5ba75a-ed20-4334-a473-ce2434eee63c",
+					"title": "Kelajagimizni o’zimiz quramiz",
+					"image": "/product-image.jpg",
+					"type": "Футболка",
+					"material": "100% хлопок",
+					"description": "Стойкий принт\nВысокое качество\nДля тех, кто любит быть не таким как все",
+					"price": 99000,
+					"url": "https://youtube.com"
+				},
+				{
+					"id": "0e02e8ab-32f2-4904-be48-d816f333db74",
+					"title": "Kelajagimizni o’zimiz quramiz",
+					"image": "/product-image.jpg",
+					"type": "Футболка",
+					"material": "100% хлопок",
+					"description": "Стойкий принт\nВысокое качество\nДля тех, кто любит быть не таким как все",
+					"price": 89000,
+					"url": "https://youtube.com"
+				},
+				{
+					"id": "ce5fb8a2-ef0d-44f6-93e1-b17bf187b71a",
+					"title": "Kelajagimizni o’zimiz quramiz",
+					"image": "/product-image.jpg",
+					"type": "Футболка",
+					"material": "100% хлопок",
+					"description": "Стойкий принт\nВысокое качество\nДля тех, кто любит быть не таким как все",
+					"price": 109000,
+					"url": "https://youtube.com"
+				},
+				{
+					"id": "82693cd8-f9db-4f00-8877-c85f2607d0ea",
+					"title": "Kelajagimizni o’zimiz quramiz",
+					"image": "/product-image.jpg",
+					"type": "Футболка",
+					"material": "100% хлопок",
+					"description": "Стойкий принт\nВысокое качество\nДля тех, кто любит быть не таким как все",
+					"price": 99000,
+					"url": "https://youtube.com"
+				},
+				{
+					"id": "b57a89cc-54d4-46bb-b9dc-e353e83de83b",
+					"title": "Kelajagimizni o’zimiz quramiz",
+					"image": "/product-image.jpg",
+					"type": "Футболка",
+					"material": "100% хлопок",
+					"description": "Стойкий принт\nВысокое качество\nДля тех, кто любит быть не таким как все",
+					"price": 89000,
+					"url": "https://youtube.com"
 				}
 			]
 		},
@@ -65,6 +125,70 @@
 				},
 				{
 					"id": "ce0d9043-2c16-46e1-af50-a50e03667f3f",
+					"title": "Kelajagimizni o’zimiz quramiz",
+					"image": "/product-image.jpg",
+					"type": "Футболка",
+					"material": "100% хлопок",
+					"description": "Стойкий принт\nВысокое качество\nДля тех, кто любит быть не таким как все",
+					"category": "Женская одежда",
+					"price": 119000,
+					"url": "https://youtube.com"
+				},
+				{
+					"id": "64788067-eba8-4302-8f0b-09d985f1dac8",
+					"title": "Kelajagimizni o’zimiz quramiz",
+					"image": "/product-image.jpg",
+					"type": "Футболка",
+					"material": "100% хлопок",
+					"description": "Стойкий принт\nВысокое качество\nДля тех, кто любит быть не таким как все",
+					"price": 99000,
+					"url": "https://youtube.com"
+				},
+				{
+					"id": "16bbe179-ff23-4d79-ab08-1ed0d0f812d6",
+					"title": "Kelajagimizni o’zimiz quramiz",
+					"image": "/product-image.jpg",
+					"type": "Футболка",
+					"material": "100% хлопок",
+					"description": "Стойкий принт\nВысокое качество\nДля тех, кто любит быть не таким как все",
+					"category": "Женская одежда",
+					"price": 109000,
+					"url": "https://youtube.com"
+				},
+				{
+					"id": "90edbeff-35f8-4004-a1c4-9faf14241632",
+					"title": "Kelajagimizni o’zimiz quramiz",
+					"image": "/product-image.jpg",
+					"type": "Футболка",
+					"material": "100% хлопок",
+					"description": "Стойкий принт\nВысокое качество\nДля тех, кто любит быть не таким как все",
+					"category": "Женская одежда",
+					"price": 119000,
+					"url": "https://youtube.com"
+				},
+				{
+					"id": "a620252f-8b34-44e2-ba65-1779304050fa",
+					"title": "Kelajagimizni o’zimiz quramiz",
+					"image": "/product-image.jpg",
+					"type": "Футболка",
+					"material": "100% хлопок",
+					"description": "Стойкий принт\nВысокое качество\nДля тех, кто любит быть не таким как все",
+					"price": 99000,
+					"url": "https://youtube.com"
+				},
+				{
+					"id": "fac71266-ef4f-40b4-a287-783522484c81",
+					"title": "Kelajagimizni o’zimiz quramiz",
+					"image": "/product-image.jpg",
+					"type": "Футболка",
+					"material": "100% хлопок",
+					"description": "Стойкий принт\nВысокое качество\nДля тех, кто любит быть не таким как все",
+					"category": "Женская одежда",
+					"price": 109000,
+					"url": "https://youtube.com"
+				},
+				{
+					"id": "5b603041-1e2f-4d74-b5dd-3153c971d7fd",
 					"title": "Kelajagimizni o’zimiz quramiz",
 					"image": "/product-image.jpg",
 					"type": "Футболка",
