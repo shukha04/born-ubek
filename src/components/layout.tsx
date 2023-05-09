@@ -1,7 +1,7 @@
+import Footer from '@/components/footer'
 import Navbar from '@/components/navbar'
 import Head from 'next/head'
 import { ReactNode } from 'react'
-import Footer from "@/components/footer";
 
 type LayoutProps = {
 	children: ReactNode
@@ -22,7 +22,7 @@ const Layout = ({children, className}: LayoutProps) => {
 				/>
 				<meta httpEquiv='X-UA-Compatible' content='ie=edge' />
 				<meta name='robots' content='index, follow' />
-				<meta name='theme-color' content='#1A1A1A' />
+				<meta name='theme-color' content='#000000' />
 				{/* OG META */}
 				<meta property='og:locale' content='ru_ru' />
 				<meta property='og:title' content='BORN UZBEK' />

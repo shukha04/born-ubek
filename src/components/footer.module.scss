@@ -4,10 +4,8 @@
 	z-index: 0;
 	right: 0;
 	bottom: 0;
-	overflow-y: scroll;
 	width: 100%;
-	max-height: calc(100svh - 80px);
-	background-color: #1A1A1A;
+	background-color: #000000;
 
 	.container {
 		max-width: 1440px;
@@ -24,7 +22,6 @@
 
 		.emailSection__info {
 			max-width: 460px;
-			margin-bottom: 32px;
 
 			p {
 				font-size: 1.3em;
@@ -33,7 +30,7 @@
 			}
 
 			small {
-				font-size: 0.7em;
+				font-size: 1em;
 				color: #6D6D6D;
 			}
 		}
@@ -61,7 +58,7 @@
 				padding: 8px 0;
 				transition: background-color 0.2s ease-out, color 0.2s ease-out;
 				text-align: center;
-				color: #1A1A1A;
+				color: #000000;
 				border: 2px solid #FFFFFF;
 				background-color: #FFFFFF;
 
@@ -73,7 +70,7 @@
 
 				&:hover, &:focus {
 					color: #FFFFFF;
-					background-color: #1A1A1A;
+					background-color: #000000;
 				}
 			}
 		}
@@ -128,17 +125,20 @@
 
 		.footerTitle {
 			font-size: 1.2em;
-			font-weight: 600;
+			font-weight: 400;
 			margin-bottom: 16px;
 		}
 
 		.footerLink {
 			font-size: 0.9em;
+			font-weight: 400;
 			display: flex;
 			align-items: center;
 			width: fit-content;
 			margin-bottom: 16px;
+			margin-left: -6px;
 			padding: 6px;
+			text-transform: none;
 
 			&:before, &:after {
 				position: absolute;
@@ -173,11 +173,11 @@
 			}
 
 			&:active {
-				color: #1A1A1A;
+				color: #000000;
 				background-color: #FFFFFF;
 
 				svg {
-					fill: #1A1A1A;
+					fill: #000000;
 				}
 			}
 
@@ -207,12 +207,12 @@
 	.authorship {
 		height: fit-content;
 		margin-top: 5vw;
-		background-color: #272727;
+		background-color: #1E1E1E;
 
 		.container {
 			display: flex;
 			flex-wrap: wrap;
-			justify-content: space-between;
+			justify-content: center;
 			padding: 16px;
 		}
 	}

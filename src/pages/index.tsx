@@ -108,6 +108,9 @@ const HomePage = ({data, posts}: { data: JSONData, posts: InstaPostType[] }) => 
 					<source src='/main-bg.webm' type='video/webm' />
 					<source src='/main-bg.mp4' type='video/mp4' />
 				</video>
+				<button className={classes.sound} onClick={handleMute}>{muted ? <HeadphoneIcon /> : <HeadphoneStrikedIcon />}</button>
+			</section>
+			<section className={classes.products} id='products'>
 				<div className={classes.roller}>
 					<ul>
 						{[...quotes, ...quotes, ...quotes, ...quotes].map((quote, i) => (
@@ -122,9 +125,6 @@ const HomePage = ({data, posts}: { data: JSONData, posts: InstaPostType[] }) => 
 						))}
 					</ul>
 				</div>
-				<button className={classes.sound} onClick={handleMute}>{muted ? <HeadphoneIcon /> : <HeadphoneStrikedIcon />}</button>
-			</section>
-			<section className={classes.products} id='products'>
 				<div role='tablist' className={classes.categories}>
 					{data.categories.map((category) => (
 						<div

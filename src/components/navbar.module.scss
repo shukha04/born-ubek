@@ -20,7 +20,7 @@
 	}
 
 	&.filled {
-		background-color: #1A1A1A;
+		background-color: #000000;
 
 		@media (max-width: 1024px) {
 			justify-content: flex-end;
@@ -35,11 +35,11 @@
 		}
 
 		ul li a:active {
-			color: #1A1A1A;
+			color: #000000;
 			background-color: #FFFFFF;
 
 			svg {
-				fill: #1A1A1A;
+				fill: #000000;
 			}
 		}
 	}
@@ -149,7 +149,7 @@
 	height: 100vh;
 	transition: transform 0.3s ease-out;
 	transform: translateX(400px);
-	background-color: #1A1A1A;
+	background-color: #000000;
 
 	@media (min-width: 1025px) {
 		display: none;
@@ -232,11 +232,11 @@
 				}
 
 				&:active {
-					color: #1A1A1A;
+					color: #000000;
 					background-color: #FFFFFF;
 
 					svg {
-						fill: #1A1A1A;
+						fill: #000000;
 					}
 				}
 			}
