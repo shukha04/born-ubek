@@ -18,7 +18,7 @@
 		align-items: flex-end;
 		flex-wrap: wrap;
 		justify-content: space-between;
-		padding: 32px 16px 0;
+		padding: 0 16px;
 
 		.emailSection__info {
 			max-width: 460px;
@@ -41,6 +41,7 @@
 			flex-shrink: 0;
 			width: 100%;
 			max-width: 500px;
+			padding-top: 32px;
 
 			input {
 				display: inline-block;
