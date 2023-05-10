@@ -53,18 +53,18 @@
 	.sound {
 		position: absolute;
 		right: 40px;
-		bottom: 40px;
+		bottom: 134px;
 		padding: 12px;
 		transition: background-color 0.3s ease-out;
 		border-radius: 100px;
 		background-color: rgba(26, 26, 26, 0.5);
 
 		@media (max-width: 1440px) {
-			bottom: 80px;
+			bottom: 120px;
 		}
 
 		@media (max-width: 768px) {
-			bottom: 76px;
+			bottom: 114px;
 		}
 
 		&:hover, &:focus {
